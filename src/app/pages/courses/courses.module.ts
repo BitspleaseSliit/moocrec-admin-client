@@ -9,6 +9,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { CoursesComponent } from './courses.component';
 import { AllCoursesComponent } from './components/all-courses/all-courses.component';
 import { CourseraCoursesComponent } from './components/coursera-courses/coursera-courses.component';
+import { EdxCoursesComponent } from './components/edx-courses/edx-courses.component';
+import { FuturelearnCoursesComponent } from './components/futurelearn-courses/futurelearn-courses.component';
 
 @NgModule({
     imports: [
@@ -22,7 +24,9 @@ import { CourseraCoursesComponent } from './components/coursera-courses/coursera
     declarations: [
         CoursesComponent,
         AllCoursesComponent,
-        CourseraCoursesComponent
+        CourseraCoursesComponent,
+        EdxCoursesComponent,
+        FuturelearnCoursesComponent
     ]
 })
 export class CoursesModule { }

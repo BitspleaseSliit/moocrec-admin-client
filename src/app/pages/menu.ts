@@ -16,6 +16,14 @@ export let MENU_ITEM = [
             {
                 path: 'coursera-courses',
                 title: 'Coursera Courses'
+            },
+            {
+                path: 'edx-courses',
+                title: 'Edx Courses'
+            },
+            {
+                path: 'futurelearn-courses',
+                title: 'Futurelearn Courses'
             }
         ]
     },
