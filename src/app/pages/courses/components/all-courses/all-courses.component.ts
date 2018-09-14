@@ -7,7 +7,7 @@ import { CoursesDataService } from './coursesData.service';
   styleUrls: ['./all-courses.component.scss'],
   providers: [CoursesDataService]
 })
-export class DataTableComponent implements OnInit {
+export class AllCoursesComponent implements OnInit {
   tableData: Array<any>;
 
   /* pagination Info */
