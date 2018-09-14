@@ -1,3 +1,23 @@
+// export let MENU_ITEM = [
+//     {
+//         path: 'index',
+//         title: 'Dashboard',
+//         icon: 'dashboard'
+//     },
+//     {
+//         path: 'ui',
+//         title: 'Courses',
+//         icon: 'paint-brush',
+//         children: [
+//             {
+//                 path: 'grid',
+//                 title: 'Bootstrap Grid'
+//             }
+//         ]
+//     },
+// ];
+
+
 export let MENU_ITEM = [
     {
         path: 'index',
