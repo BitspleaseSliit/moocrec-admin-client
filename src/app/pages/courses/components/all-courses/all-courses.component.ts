@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { TablesDataService } from './tablesData.service';
+import { CoursesDataService } from './coursesData.service';
 
 @Component({
   selector: 'app-all-courses',
   templateUrl: './all-courses.component.html',
   styleUrls: ['./all-courses.component.scss'],
-  providers: [TablesDataService]
+  providers: [CoursesDataService]
 })
 export class DataTableComponent implements OnInit {
   tableData: Array<any>;
@@ -14,14 +14,14 @@ export class DataTableComponent implements OnInit {
   pageSize = 10;
   pageNumber = 1;
 
-  constructor(private _tablesDataService: TablesDataService) { }
+  constructor(private _coursesDataService: CoursesDataService) { }
 
   ngOnInit() {
     this.loadData();
   }
 
   loadData() {
-    this.tableData = this._tablesDataService.DATA;
+    this.tableData = this._coursesDataService.DATA;
   }
 
   pageChanged(pN: number): void {
