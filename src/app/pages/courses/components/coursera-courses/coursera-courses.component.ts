@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { CoursesDataService } from '../../services/coursesData.service';
 
 @Component({
-  selector: 'app-all-courses',
-  templateUrl: './all-courses.component.html',
-  styleUrls: ['./all-courses.component.scss'],
+  selector: 'app-coursera-courses',
+  templateUrl: './coursera-courses.component.html',
+  styleUrls: ['./coursera-courses.component.scss'],
   providers: [CoursesDataService]
 })
-export class AllCoursesComponent implements OnInit {
+export class CourseraCoursesComponent implements OnInit {
   tableData: Array<any>;
 
   /* pagination Info */

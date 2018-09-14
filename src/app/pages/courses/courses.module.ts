@@ -8,7 +8,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
 /* components */
 import { CoursesComponent } from './courses.component';
 import { AllCoursesComponent } from './components/all-courses/all-courses.component';
-// import { CoursesDataService } from './components/all-courses/coursesData.service';
+import { CourseraCoursesComponent } from './components/coursera-courses/coursera-courses.component';
 
 @NgModule({
     imports: [
@@ -21,7 +21,8 @@ import { AllCoursesComponent } from './components/all-courses/all-courses.compon
     ],
     declarations: [
         CoursesComponent,
-        AllCoursesComponent
+        AllCoursesComponent,
+        CourseraCoursesComponent
     ]
 })
 export class CoursesModule { }

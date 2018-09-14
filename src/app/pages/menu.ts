@@ -12,6 +12,10 @@ export let MENU_ITEM = [
             {
                 path: 'all-courses',
                 title: 'All Courses'
+            },
+            {
+                path: 'coursera-courses',
+                title: 'Coursera Courses'
             }
         ]
     },
