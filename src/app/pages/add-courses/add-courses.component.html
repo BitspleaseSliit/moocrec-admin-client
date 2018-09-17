@@ -1,28 +1,23 @@
 <div class="row">
   <div class="col-md-12">
-    <card cardTitle="Inline Form">
-      <form class="form-inline">
-        <label for="example1" class="form-label">Name:</label>
-        <input type="text" class="form-control" id="example1" placeholder="Jane Doe">
-        <label for="example2" class="form-label">Email:</label>
-        <input type="email" class="form-control" id="example2" placeholder="jane.doe@example.com">
-        <button type="submit" class="btn btn-primary">Send Invitation</button>
-      </form>
-    </card>
-  </div>
-  <div class="col-md-12">
-    <card cardTitle="Basic Form">
+    <card cardTitle="Add Course">
       <form class="form-group">
-        <label class="control-label">Name</label>
-        <input type="text" class="form-control" placeholder="Name">
-        <label class="control-label">Surname</label>
-        <input type="text" class="form-control" placeholder="Surname">
-        <label class="control-label">Password</label>
-        <input type="password" class="form-control" placeholder="Password">
-        <label class="control-label">Description</label>
-        <textarea class="form-control" placeholder="Description"></textarea>
-        <input class="checkbox" type="checkbox" id="remember" checked>
-        <label class="check-label" for="remember">Remember Me</label>
+        <label class="control-label">Course Name</label>
+        <input type="text" class="form-control" placeholder="course name">
+        <label class="control-label">Provider</label>
+        <input type="text" class="form-control" placeholder="provider">
+        <label class="control-label">Course URL</label>
+        <input type="text" class="form-control" placeholder="course url">
+        <label class="control-label">Logo</label>
+        <select name="select" id="select1" class="form-control">
+          <option value="coursera">Coursera</option>
+          <option value="edx">Edx</option>
+          <option value="feturelearn">Feturelearn</option>
+        </select>
+        <label class="control-label">Path</label>
+        <input type="text" class="form-control" placeholder="path">
+        <label class="control-label">Download</label>
+        <switch switchName="multiple" switchId="multiple1" class="form-control" multiple [checked]="true"></switch>
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
     </card>
