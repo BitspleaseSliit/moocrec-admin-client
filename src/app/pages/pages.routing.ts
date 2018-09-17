@@ -13,7 +13,8 @@ export const childRoutes: Routes = [
         children: [
             { path: '', redirectTo: 'index', pathMatch: 'full' },
             { path: 'index', loadChildren: './index/index.module#IndexModule' },
-            { path: 'courses', loadChildren: './courses/courses.module#CoursesModule' }
+            { path: 'courses', loadChildren: './courses/courses.module#CoursesModule' },
+            { path: 'add-courses', loadChildren: './add-courses/add-courses.module#AddCoursesModule' }
         ]
     }
 ];

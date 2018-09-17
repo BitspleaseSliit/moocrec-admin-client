@@ -27,6 +27,11 @@ export let MENU_ITEM = [
             }
         ]
     },
+    {
+        path: 'add-courses',
+        title: 'Add Courses',
+        icon: 'check-square-o'
+    }
 ];
 
 
