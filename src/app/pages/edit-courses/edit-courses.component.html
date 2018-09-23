@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col-md-12">
+    <card cardTitle="Edit Course">
+      <form class="form-group">
+        <label class="control-label">Course Name</label>
+        <input type="text" class="form-control" placeholder="course name">
+        <label class="control-label">Provider</label>
+        <input type="text" class="form-control" placeholder="provider">
+        <label class="control-label">Course URL</label>
+        <input type="text" class="form-control" placeholder="course url">
+        <label class="control-label">Logo</label>
+        <select name="select" id="select1" class="form-control">
+          <option value="coursera">Coursera</option>
+          <option value="edx">Edx</option>
+          <option value="feturelearn">Feturelearn</option>
+        </select>
+        <label class="control-label">Path</label>
+        <input type="text" class="form-control" placeholder="path">
+        <label class="control-label">Download</label>
+        <switch switchName="multiple" switchId="multiple1" class="form-control" multiple [checked]="true"></switch>
+        <label class="control-label">Proceed</label>
+        <switch switchName="multiple" switchId="multiple1" class="form-control" multiple [checked]="true"></switch>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </card>
+  </div>
+</div>
