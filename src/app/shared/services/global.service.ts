@@ -47,7 +47,6 @@ export class GlobalService {
     }
 }
 
-
 export class DataSourceClass {
     ev: string;
     value: any
