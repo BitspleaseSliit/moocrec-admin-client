@@ -32,8 +32,8 @@ export class APIService {
         return this.https.get<any>(`courses/all`);
     }
 
-    public getFirstCallLeads(): Observable<any> {
-        return this.https.post<any>(`leads/get/FIRST-CALL`);
+    public getEdxCourses(): Observable<any> {
+        return this.https.get<any>(`courses/logo/edx`);
     }
 
     public getDocsPendingLeads(): Observable<any> {
