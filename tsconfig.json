@@ -30,6 +30,9 @@
       ],
       "@auth/*": [
         "app/auth/*"
+      ],
+      "@sv/*": [
+        "app/shared/services/*"
       ]
     }
   }

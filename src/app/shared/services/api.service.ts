@@ -28,8 +28,8 @@ export class APIService {
         return this.https.post<any>(`leads/ref/${reference}/profile`);
     }
 
-    public getAllLeads(): Observable<any> {
-        return this.https.post<any>(`leads/get/ALL`);
+    public getAllCourses(): Observable<any> {
+        return this.https.get<any>(`courses/all`);
     }
 
     public getFirstCallLeads(): Observable<any> {
