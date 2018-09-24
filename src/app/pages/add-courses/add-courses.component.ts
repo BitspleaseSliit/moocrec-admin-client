@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddCoursesComponent implements OnInit {
 
+  public addCourse: any;
+
   constructor() { }
 
   ngOnInit() {

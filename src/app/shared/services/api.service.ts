@@ -24,9 +24,9 @@ export class APIService {
 
     constructor(private https: HttpsClient) { }
 
-    public getLeadProfile(reference: string): Observable<any> {
-        return this.https.post<any>(`leads/ref/${reference}/profile`);
-    }
+    // public getLeadProfile(reference: string): Observable<any> {
+    //     return this.https.post<any>(`leads/ref/${reference}/profile`);
+    // }
 
     public getAllCourses(): Observable<any> {
         return this.https.get<any>(`courses/all`);
@@ -36,87 +36,95 @@ export class APIService {
         return this.https.get<any>(`courses/logo/edx`);
     }
 
-    public getDocsPendingLeads(): Observable<any> {
-        return this.https.post<any>(`leads/get/DOC-PENDING`);
+    public getCourseraCourses(): Observable<any> {
+        return this.https.get<any>(`courses/logo/coursera`);
     }
 
-    public getApprPendingLeads(): Observable<any> {
-        return this.https.post<any>(`leads/get/APPR-PENDING`);
+    public getFuturelearnCourses(): Observable<any> {
+        return this.https.get<any>(`courses/logo/futurelearn`);
     }
 
-    public getVerificationPendingLeads(): Observable<any> {
-        return this.https.post<any>(`leads/get/VERIFICATION`);
-    }
+    // public getDocsPendingLeads(): Observable<any> {
+    //     return this.https.post<any>(`leads/get/DOC-PENDING`);
+    // }
 
-    public getLeadsNavigation(): Observable<any> {
-        return this.https.post<any>(`leads/navigation`);
-    }
+    // public getApprPendingLeads(): Observable<any> {
+    //     return this.https.post<any>(`leads/get/APPR-PENDING`);
+    // }
 
-    public getCompleteLeads(): Observable<any> {
-        return this.https.post<any>(`leads/get/COMPLETE`);
-    }
+    // public getVerificationPendingLeads(): Observable<any> {
+    //     return this.https.post<any>(`leads/get/VERIFICATION`);
+    // }
 
-    public getActiveLeads(): Observable<any> {
-        return this.https.post<any>(`leads/get/ACTIVE`);
-    }
+    // public getLeadsNavigation(): Observable<any> {
+    //     return this.https.post<any>(`leads/navigation`);
+    // }
 
-    public getRejectedLeads(): Observable<any> {
-        return this.https.post<any>(`leads/get/REJECTED`);
-    }
+    // public getCompleteLeads(): Observable<any> {
+    //     return this.https.post<any>(`leads/get/COMPLETE`);
+    // }
 
-    public getIssuedLeads(): Observable<any> {
-        return this.https.post<any>(`leads/get/ISSUED`);
-    }
+    // public getActiveLeads(): Observable<any> {
+    //     return this.https.post<any>(`leads/get/ACTIVE`);
+    // }
 
-    public getCanceledLeads(): Observable<any> {
-        return this.https.post<any>(`leads/get/CANCELED`);
-    }
+    // public getRejectedLeads(): Observable<any> {
+    //     return this.https.post<any>(`leads/get/REJECTED`);
+    // }
 
-    public getActivatedLeads(): Observable<any> {
-        return this.https.post<any>(`leads/get/ACTIVATED`);
-    }
+    // public getIssuedLeads(): Observable<any> {
+    //     return this.https.post<any>(`leads/get/ISSUED`);
+    // }
 
-    public getRenewedLeads(): Observable<any> {
-        return this.https.post<any>(`leads/get/RENEWED`);
-    }
+    // public getCanceledLeads(): Observable<any> {
+    //     return this.https.post<any>(`leads/get/CANCELED`);
+    // }
 
-    public stateChangeApprove(payload: any): Observable<any> {
-        return this.https.post<any>(`leads/statechange/APPROVE`, payload);
-    }
+    // public getActivatedLeads(): Observable<any> {
+    //     return this.https.post<any>(`leads/get/ACTIVATED`);
+    // }
 
-    public stateChangeReject(payload: any): Observable<any> {
-        return this.https.post<any>(`leads/statechange/REJECT`, payload);
-    }
+    // public getRenewedLeads(): Observable<any> {
+    //     return this.https.post<any>(`leads/get/RENEWED`);
+    // }
 
-    public stateChangeUndo(payload: any): Observable<any> {
-        return this.https.post<any>(`leads/statechange/UNDO`, payload);
-    }
+    // public stateChangeApprove(payload: any): Observable<any> {
+    //     return this.https.post<any>(`leads/statechange/APPROVE`, payload);
+    // }
 
-    public stateChangeCancel(payload: any): Observable<any> {
-        return this.https.post<any>(`leads/stateCanceled`, payload);
-    }
+    // public stateChangeReject(payload: any): Observable<any> {
+    //     return this.https.post<any>(`leads/statechange/REJECT`, payload);
+    // }
 
-    public updateLeadAssignee(userId: number, leadId: number): Observable<any> {
-        const supervisorId = 10;
-        return this.https.post(`leads/assignee/${userId}/supervisor/${leadId}`);
-    }
+    // public stateChangeUndo(payload: any): Observable<any> {
+    //     return this.https.post<any>(`leads/statechange/UNDO`, payload);
+    // }
 
-    public getLeadsCount(): Observable<any[]> {
-        return this.https.post<any[]>(`leads/count`);
-    }
+    // public stateChangeCancel(payload: any): Observable<any> {
+    //     return this.https.post<any>(`leads/stateCanceled`, payload);
+    // }
 
-    public getBalanceTransferAllLeads(): Observable<any> {
-        return this.https.post<any>('leads/balance/0');
-    }
-    public getBalanceTransferPendingLeads(): Observable<any> {
-        return this.https.post<any>('leads/balance/1');
-    }
-    public getBalanceTransferCompletedLeads(): Observable<any> {
-        return this.https.post<any>('leads/balance/2');
-    }
-    public getBalanceTransferRejectedLeads(): Observable<any> {
-        return this.https.post<any>('leads/balance/3');
-    }
+    // public updateLeadAssignee(userId: number, leadId: number): Observable<any> {
+    //     const supervisorId = 10;
+    //     return this.https.post(`leads/assignee/${userId}/supervisor/${leadId}`);
+    // }
+
+    // public getLeadsCount(): Observable<any[]> {
+    //     return this.https.post<any[]>(`leads/count`);
+    // }
+
+    // public getBalanceTransferAllLeads(): Observable<any> {
+    //     return this.https.post<any>('leads/balance/0');
+    // }
+    // public getBalanceTransferPendingLeads(): Observable<any> {
+    //     return this.https.post<any>('leads/balance/1');
+    // }
+    // public getBalanceTransferCompletedLeads(): Observable<any> {
+    //     return this.https.post<any>('leads/balance/2');
+    // }
+    // public getBalanceTransferRejectedLeads(): Observable<any> {
+    //     return this.https.post<any>('leads/balance/3');
+    // }
 
     // public setBalanceTransferd(payload): Observable<ILead> {
     //     return this.https.post<ILead>('leads/balance/change', payload);

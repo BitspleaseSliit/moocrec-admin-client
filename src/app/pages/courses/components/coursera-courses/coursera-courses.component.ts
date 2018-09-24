@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CoursesDataService } from '../../services/coursesData.service';
+import { APIService } from '../../../../shared/services/api.service';
 
 @Component({
   selector: 'app-coursera-courses',
@@ -14,14 +15,21 @@ export class CourseraCoursesComponent implements OnInit {
   pageSize = 10;
   pageNumber = 1;
 
-  constructor(private _coursesDataService: CoursesDataService) { }
+  constructor(private _apiService: APIService) { }
 
   ngOnInit() {
     this.loadData();
   }
 
   loadData() {
-    this.tableData = this._coursesDataService.DATA;
+    this._apiService.getCourseraCourses().subscribe(
+      (data: any)=>{
+        this.tableData = data.courses;
+      },
+      (error: any)=>{
+        console.log('getCourseraCourses error : ', error);
+      }
+    )
   }
 
   pageChanged(pN: number): void {

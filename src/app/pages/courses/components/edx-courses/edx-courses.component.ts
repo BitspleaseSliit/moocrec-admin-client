@@ -5,8 +5,7 @@ import { APIService } from '../../../../shared/services/api.service';
 @Component({
   selector: 'app-edx-courses',
   templateUrl: './edx-courses.component.html',
-  styleUrls: ['./edx-courses.component.scss'],
-  providers: [CoursesDataService]
+  styleUrls: ['./edx-courses.component.scss']
 })
 export class EdxCoursesComponent implements OnInit {
   tableData: Array<any>;
@@ -15,7 +14,7 @@ export class EdxCoursesComponent implements OnInit {
   pageSize = 10;
   pageNumber = 1;
 
-  constructor(private _coursesDataService: CoursesDataService, private _apiService: APIService) { }
+  constructor(private _apiService: APIService) { }
 
   ngOnInit() {
     this.loadData();
